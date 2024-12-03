@@ -14,9 +14,23 @@ app = Flask(__name__)
 
 # Configuración de rutas
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, "modelos/Llama-3.2-3B-Instruct-Q4_0.gguf")
-ffmpeg_path = r"D:\gpt4all\ffmpeg\ffmpeg-2024-11-28-git-bc991ca048-full_build\ffmpeg-2024-11-28-git-bc991ca048-full_build\bin\ffmpeg.exe"
-whisper_model_path = r"D:/gpt4all/whisper/small.pt"
+# Ruta relativa al modelo GPT
+model_path = os.path.join(BASE_DIR, "modelos", "Llama-3.2-3B-Instruct-Q4_0.gguf")
+
+# Ruta relativa a FFmpeg
+ffmpeg_path = os.path.join(BASE_DIR, "ffmpeg", 
+                           "ffmpeg-2024-11-28-git-bc991ca048-full_build", 
+                           "ffmpeg-2024-11-28-git-bc991ca048-full_build", 
+                           "bin", "ffmpeg.exe")
+
+# Ruta relativa al modelo Whisper
+whisper_model_path = os.path.join(BASE_DIR, "whisper", "small.pt")
+
+# Imprimir rutas para verificar
+print("Model Path:", model_path)
+print("FFmpeg Path:", ffmpeg_path)
+print("Whisper Model Path:", whisper_model_path)
+
 
 # Configurar la variable de entorno para FFmpeg
 os.environ["PATH"] = os.path.dirname(ffmpeg_path) + os.pathsep + os.environ["PATH"]
