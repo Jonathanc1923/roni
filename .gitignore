@@ -5,6 +5,7 @@
 *.zip
 *.tar.gz
 
+
 # Ignorar archivos temporales
 *.tmp
 *.log
