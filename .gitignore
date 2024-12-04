@@ -1,0 +1,14 @@
+# Ignorar modelos y binarios
+*.pt
+*.exe
+*.7z
+*.zip
+*.tar.gz
+
+# Ignorar archivos temporales
+*.tmp
+*.log
+temp_audio.*
+
+# Ignorar carpetas específicas
+__pycache__/
