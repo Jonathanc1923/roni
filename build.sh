@@ -1,2 +1,4 @@
 #!/bin/bash
-apt-get update && apt-get install -y espeak-ng
+echo "Ejecutando build.sh..."
+chmod +x build.sh
+pip install -r requirements.txt
